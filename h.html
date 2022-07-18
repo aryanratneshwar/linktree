@@ -1,0 +1,25 @@
+if(check[x1]==n || check[y1]==n) {
+    if(check[y1]==n) {
+    if(check[x1]==n)
+        check[x1]=-1;
+    else
+        check[x1]--;
+    check[y1]=x1; }
+    else {
+    if(check[y1]==n)
+        check[y1]=-1;
+    else
+        check[y1]--;
+    check[x1]=y1; }
+   }
+ else if(x1==y1)
+     flag=0;
+ else if(check[x1]<0 || check[y1]<0) {
+    if(check[x1]<=check[y1]) {
+       check[x1]--;
+       check[y1]=x1; }
+    else {
+       check[y1]--;
+       check[x1]=y1;
+       }
+  }
